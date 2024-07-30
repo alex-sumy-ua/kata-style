@@ -124,7 +124,7 @@ class MathOperationsTest {
         CheeseStorage output4 = CheeseStorage.NO_CHEESE;
         CheeseStorage output5 = CheeseStorage.CHEESE_PARTY;
 
-        CheeseStorage output6 = CheeseStorage.NO_CHEESE;
+        CheeseStorage output6 = CheeseStorage.NO_CHEESE; // ???????????????? why 'CHEESE' ?
         CheeseStorage output7 = CheeseStorage.NO_CHEESE;
 
         assertEquals(output1, cc.evaluate(input1, 6, 0));
