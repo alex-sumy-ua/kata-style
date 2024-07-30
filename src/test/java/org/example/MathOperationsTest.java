@@ -48,20 +48,37 @@ class MathOperationsTest {
             assertEquals(res2, me.mean(array2));
         }
 
-        @Test
-        @DisplayName("Testing sumASCII - the sum of ASCII codes in the input String method")
-        void sumASCIITest() {
-            SumASCIITotal sa = new SumASCIITotal();
-            String str1 = "northcoders"; // should return 1195
-            String str2 = "Northcoders"; // should return 1163
-            String str3 = "a"; // should return 97
-            int res1 = 1195;
-            int res2 = 1163;
-            int res3 = 97;
-            assertEquals(res1, sa.sumASCII(str1));
-            assertEquals(res2, sa.sumASCII(str2));
-            assertEquals(res3, sa.sumASCII(str3));
+    @Test
+    @DisplayName("Testing sumASCII - the sum of ASCII codes in the input String method")
+    void sumASCIITest() {
+        SumASCIITotal sa = new SumASCIITotal();
+        String str1 = "northcoders"; // should return 1195
+        String str2 = "Northcoders"; // should return 1163
+        String str3 = "a"; // should return 97
+        int res1 = 1195;
+        int res2 = 1163;
+        int res3 = 97;
+        assertEquals(res1, sa.sumASCII(str1));
+        assertEquals(res2, sa.sumASCII(str2));
+        assertEquals(res3, sa.sumASCII(str3));
 
-        }
+    }
+    @Test
+    @DisplayName("Testing EvaluateLecture.evaluate method")
+    void evaluateTest() {
+        EvaluateLecture el = new EvaluateLecture();
+
+        String str1 = "northcoders"; // should return 1195
+        String str2 = "Northcoders"; // should return 1163
+        String str3 = "a"; // should return 97
+        int res1 = 1195;
+        int res2 = 1163;
+        int res3 = 97;
+
+        assertEquals(res1, sa.sumASCII(str1));
+        assertEquals(res2, sa.sumASCII(str2));
+        assertEquals(res3, sa.sumASCII(str3));
+
+    }
 
 }
