@@ -115,19 +115,27 @@ class MathOperationsTest {
         String input4 = "---K-----M---C--";
         String input5 = "---K---M---C--";
 
+        String input6 = "---M-----K---C--";
+        String input7 = "---M-----K---C--";
+
         CheeseStorage output1 = CheeseStorage.NO_CHEESE;
         CheeseStorage output2 = CheeseStorage.CHEESE;
         CheeseStorage output3 = CheeseStorage.CHEESE;
         CheeseStorage output4 = CheeseStorage.NO_CHEESE;
         CheeseStorage output5 = CheeseStorage.CHEESE_PARTY;
 
+        CheeseStorage output6 = CheeseStorage.NO_CHEESE;
+        CheeseStorage output7 = CheeseStorage.NO_CHEESE;
+
         assertEquals(output1, cc.evaluate(input1, 6, 0));
         assertEquals(output2, cc.evaluate(input2, 0, 6));
         assertEquals(output3, cc.evaluate(input3, 1, 1));
         assertEquals(output4, cc.evaluate(input4, 3, 1));
         assertEquals(output5, cc.evaluate(input5, 2, 1));
-    }
 
+        assertEquals(output6, cc.evaluate(input6, 6, 6));
+        assertEquals(output7, cc.evaluate(input7, -1, 1));
+    }
 
 
 }

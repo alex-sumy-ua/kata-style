@@ -1,7 +1,5 @@
 package org.example;
 
-import java.sql.SQLOutput;
-
 public class ChaseCheese {
 
     public CheeseStorage evaluate(String way, int catSpeed, int mouseSpeed) { //  string / cat speed / mouse speed
@@ -23,9 +21,9 @@ public class ChaseCheese {
         double mouseSteps = (cheesePosition - mousePosition);
 
         // taking into account the speeds
-        if (catSpeed == 0) catSteps = 2147483647;
+        if (catSpeed == 0) catSteps = Integer.MAX_VALUE;
         else catSteps = (double)catSteps / catSpeed;
-        if (mouseSpeed == 0) mouseSteps = 2147483647;
+        if (mouseSpeed == 0) mouseSteps = Integer.MAX_VALUE;
         else mouseSteps = (double)mouseSteps / mouseSpeed;
 
         // to compare
