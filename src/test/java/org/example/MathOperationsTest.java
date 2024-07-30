@@ -10,7 +10,7 @@ class MathOperationsTest {
     @Test
     @DisplayName("Testing sum of array's elements method")
     void sum() {
-        MathOperations mo = new MathOperations();
+        Sum mo = new Sum();
         int[] array = {1, 2, 3, 4, 5, 6, 7, 8, 9, 25};
         int result = 44;
         assertEquals(result, mo.sum(array));
@@ -35,4 +35,16 @@ class MathOperationsTest {
         assertEquals(res6, mo.sum(arr6));
 
     }
-}
+
+    @Test
+    @DisplayName("Testing mean of array's elements method")
+    void mean() {
+        Mean me = new Mean();
+        int[] array1 = { 1, 2, 3 }; // should return 2
+        int[] array2 = { 40, 16, 5, 8 }; // should return 17.25
+        double res1 = 2;
+        double res2 = 17.25;
+        assertEquals(res1, me.mean(array1));
+        assertEquals(res2, me.mean(array2));
+        }
+    }

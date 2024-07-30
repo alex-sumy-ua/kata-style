@@ -1,6 +1,6 @@
 package org.example;
 
-public class MathOperations {
+public class Sum {
 
     public int sum(int[] array) {
         int result = 0;
