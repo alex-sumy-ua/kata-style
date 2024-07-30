@@ -63,6 +63,7 @@ class MathOperationsTest {
         assertEquals(res3, sa.sumASCII(str3));
 
     }
+
     @Test
     @DisplayName("Testing EvaluateLecture.evaluate method")
     void evaluateTest() {
@@ -79,6 +80,29 @@ class MathOperationsTest {
         assertEquals(return1, el.evaluate(prArray1));
         assertEquals(return2, el.evaluate(prArray2));
         assertEquals(return3, el.evaluate(prArray3));
+
+    }
+
+    @Test
+    @DisplayName("Testing Rot13.code method")
+    void codeTest() {
+        Rot13 r13 = new Rot13();
+        /*
+        "northcoders" // should return "abegupbqref"
+        "abegupbqref" // should return "northcoders"
+        "I'm sure glad nobody can read my secret ROT13 code." // should return "V'z fher tynq abobql pna ernq zl frperg EBG13 pbqr."
+         */
+        String input1 = "northcoders";
+        String input2 = "abegupbqref";
+        String input3 = "I'm sure glad nobody can read my secret ROT13 code.";
+
+        String output1 = "abegupbqref";
+        String output2 = "northcoders";
+        String output3 = "V'z fher tynq abobql pna ernq zl frperg EBG13 pbqr.";
+
+        assertEquals(output1, r13.code(input1));
+        assertEquals(output2, r13.code(input2));
+        assertEquals(output3, r13.code(input3));
 
     }
 
