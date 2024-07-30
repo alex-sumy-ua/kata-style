@@ -80,7 +80,6 @@ class MathOperationsTest {
         assertEquals(return1, el.evaluate(prArray1));
         assertEquals(return2, el.evaluate(prArray2));
         assertEquals(return3, el.evaluate(prArray3));
-
     }
 
     @Test
@@ -103,7 +102,32 @@ class MathOperationsTest {
         assertEquals(output1, r13.code(input1));
         assertEquals(output2, r13.code(input2));
         assertEquals(output3, r13.code(input3));
-
     }
+
+    @Test
+    @DisplayName("Testing CheeseStorage.evaluate method")
+    void evaluateCheeseTest() {
+        ChaseCheese cc = new ChaseCheese();
+
+        String input1 = "---K-----M---C--";
+        String input2 = "---K-----M---C--";
+        String input3 = "---K-----M---C--";
+        String input4 = "---K-----M---C--";
+        String input5 = "---K---M---C--";
+
+        CheeseStorage output1 = CheeseStorage.NO_CHEESE;
+        CheeseStorage output2 = CheeseStorage.CHEESE;
+        CheeseStorage output3 = CheeseStorage.CHEESE;
+        CheeseStorage output4 = CheeseStorage.NO_CHEESE;
+        CheeseStorage output5 = CheeseStorage.CHEESE_PARTY;
+
+        assertEquals(output1, cc.evaluate(input1, 6, 0));
+        assertEquals(output2, cc.evaluate(input2, 0, 6));
+        assertEquals(output3, cc.evaluate(input3, 1, 1));
+        assertEquals(output4, cc.evaluate(input4, 3, 1));
+        assertEquals(output5, cc.evaluate(input5, 2, 1));
+    }
+
+
 
 }
