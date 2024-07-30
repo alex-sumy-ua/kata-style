@@ -68,16 +68,17 @@ class MathOperationsTest {
     void evaluateTest() {
         EvaluateLecture el = new EvaluateLecture();
 
-        String str1 = "northcoders"; // should return 1195
-        String str2 = "Northcoders"; // should return 1163
-        String str3 = "a"; // should return 97
-        int res1 = 1195;
-        int res2 = 1163;
-        int res3 = 97;
+        PressResult[] prArray1 = new PressResult[] {PressResult.LIKE, PressResult.DISLIKE };
+        PressResult[] prArray2 = new PressResult[] {PressResult.LIKE };
+        PressResult[] prArray3 = new PressResult[] {PressResult.DISLIKE, PressResult.DISLIKE };
 
-        assertEquals(res1, sa.sumASCII(str1));
-        assertEquals(res2, sa.sumASCII(str2));
-        assertEquals(res3, sa.sumASCII(str3));
+        PressResult return1 = PressResult.NEUTRAL;
+        PressResult return2 = PressResult.LIKE;
+        PressResult return3 = PressResult.NEUTRAL;
+
+        assertEquals(return1, el.evaluate(prArray1));
+        assertEquals(return2, el.evaluate(prArray2));
+        assertEquals(return3, el.evaluate(prArray3));
 
     }
 
